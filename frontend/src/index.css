@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 30% 97%;
+    --foreground: 150 25% 15%;
+
+    --card: 140 35% 99%;
+    --card-foreground: 150 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 25% 15%;
+
+    --primary: 152 55% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 25% 93%;
+    --secondary-foreground: 150 20% 30%;
+
+    --muted: 140 20% 91%;
+    --muted-foreground: 150 15% 45%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 150 25% 15%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 20% 88%;
+    --input: 140 22% 90%;
+    --ring: 152 55% 40%;
+
+    --radius: 0.875rem;
+
+    /* Student-friendly tokens */
+    --notebook-line: 152 25% 85%;
+    --highlight-yellow: 48 100% 85%;
+    --highlight-green: 145 60% 88%;
+    --highlight-blue: 210 80% 90%;
+    --paper: 140 35% 99%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(152 55% 40%), hsl(165 50% 45%));
+    --gradient-surface: linear-gradient(180deg, hsl(140 30% 98%), hsl(140 25% 95%));
+    --gradient-paper: linear-gradient(180deg, hsl(140 35% 99%), hsl(140 28% 96%));
+    
+    --shadow-sm: 0 1px 3px 0 hsl(150 25% 15% / 0.04);
+    --shadow-md: 0 4px 8px -2px hsl(150 25% 15% / 0.06), 0 2px 4px -2px hsl(150 25% 15% / 0.04);
+    --shadow-lg: 0 12px 24px -4px hsl(150 25% 15% / 0.08), 0 4px 8px -4px hsl(150 25% 15% / 0.04);
+    --shadow-glow: 0 0 20px hsl(152 55% 40% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 140 13% 91%;
+    --sidebar-ring: 152 55% 40%;
+  }
+
+  .dark {
+    --background: 160 20% 8%;
+    --foreground: 140 25% 92%;
+
+    --card: 160 18% 12%;
+    --card-foreground: 140 25% 92%;
+
+    --popover: 160 18% 12%;
+    --popover-foreground: 140 25% 92%;
+
+    --primary: 152 60% 50%;
+    --primary-foreground: 160 20% 8%;
+
+    --secondary: 160 15% 18%;
+    --secondary-foreground: 140 20% 85%;
+
+    --muted: 160 15% 20%;
+    --muted-foreground: 150 12% 55%;
+
+    --accent: 45 80% 55%;
+    --accent-foreground: 160 20% 8%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 15% 20%;
+    --input: 160 15% 20%;
+    --ring: 152 60% 50%;
+
+    --notebook-line: 160 18% 22%;
+    --highlight-yellow: 48 60% 22%;
+    --highlight-green: 145 35% 20%;
+    --highlight-blue: 210 45% 22%;
+    --paper: 160 18% 12%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(152 60% 50%), hsl(165 55% 55%));
+    --gradient-surface: linear-gradient(180deg, hsl(160 20% 10%), hsl(160 18% 8%));
+    --gradient-paper: linear-gradient(180deg, hsl(160 18% 12%), hsl(160 16% 10%));
+
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 4px 8px -2px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 12px 24px -4px hsl(0 0% 0% / 0.4), 0 4px 8px -4px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 25px hsl(152 60% 50% / 0.2);
+
+    --sidebar-background: 160 18% 10%;
+    --sidebar-foreground: 140 20% 90%;
+    --sidebar-primary: 152 60% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 15% 16%;
+    --sidebar-accent-foreground: 140 20% 90%;
+    --sidebar-border: 160 15% 18%;
+    --sidebar-ring: 152 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Quicksand', system-ui, sans-serif;
+  }
+
+  /* Comfortable reading typography */
+  .prose-study {
+    font-family: 'Nunito', system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+  }
+
+  .font-serif-display {
+    font-family: 'Libre Baskerville', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-surface {
+    background: var(--gradient-surface);
+  }
+
+  .gradient-paper {
+    background: var(--gradient-paper);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Notebook lines effect */
+  .notebook-lines {
+    background-image: repeating-linear-gradient(
+      transparent,
+      transparent 1.75rem,
+      hsl(var(--notebook-line)) 1.75rem,
+      hsl(var(--notebook-line)) calc(1.75rem + 1px)
+    );
+    background-position-y: 0.5rem;
+  }
+
+  /* Highlight effects */
+  .highlight-yellow {
+    background-color: hsl(var(--highlight-yellow));
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .highlight-green {
+    background-color: hsl(var(--highlight-green));
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .highlight-blue {
+    background-color: hsl(var(--highlight-blue));
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
