@@ -10,7 +10,7 @@ This project focuses on real AI integration (not mock data) and clean frontend�
 ## ✨ Features
 
 - 📄 Summarize Study Notes : Generate concise academic summaries from long study notes.
-- ❓ Contextual Question Answering : Ask questions strictly based on the provided notes (no hallucinated answers).
+- ❓ Contextual Question Answering : Ask questions strictly based on the provided notes.
 - ⚡ Real-time AI Processing : Uses Hugging Face models via a live backend API.
 - 🎨 Student-friendly UI : Clean, modern interface designed for learners.
 
