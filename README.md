@@ -125,6 +125,61 @@ POST /api/ai/process
 
 ---
 
+## 🧪 API Testing with Thunder Client
+All backend APIs were tested using Thunder Client, a lightweight REST client extension for VS Code.
+
+### Why Thunder Client?
+- Integrated directly into VS Code
+- Faster and lighter than Postman
+- Ideal for testing local APIs during development
+
+### Tested Endpoint
+```text
+POST http://localhost:5000/api/ai/process
+```
+### Required Headers
+```text
+{
+  "Content-Type": "application/json"
+}
+```
+### Test Case 1: Summarize Study Notes
+#### Request Body
+```text
+{
+  "mode": "summarize",
+  "notes": "Operating systems manage computer hardware and software resources including memory, processes, and file systems."
+}
+```
+#### Expected Response
+```text
+{
+  "output": "Operating systems manage hardware and software resources such as memory, processes, and file systems."
+}
+```
+### Test Case 2: Question Answering
+#### Request Body
+```text
+{
+  "mode": "qa",
+  "notes": "Round Robin Scheduling assigns each process a fixed time slice in a cyclic order to ensure fairness.",
+  "question": "What does Round Robin Scheduling ensure?"
+}
+```
+#### Expected Response
+```text
+{
+  "output": "It ensures fairness."
+}
+```
+### Purpose of API Testing
+- Verified correct request–response flow
+- Confirmed AI responses are generated live (no mocked data)
+- Validated backend behavior independently of frontend
+- Ensured API contract consistency before UI integration
+
+---
+
 ## 🧠 How It Works
 - User enters study notes in the frontend
 - Frontend sends a POST request to the backend
