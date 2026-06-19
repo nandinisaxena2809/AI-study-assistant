@@ -1,4 +1,7 @@
-const API_URL = `${import.meta.env.VITE_API_URL}/api/ai/process`;
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000/api/ai/process"
+    : "https://ai-study-assistant-gyls.onrender.com/api/ai/process";
 
 export async function callAI({ mode, notes, question }) {
   const res = await fetch(API_URL, {
@@ -18,7 +21,5 @@ export async function callAI({ mode, notes, question }) {
   }
 
   const data = await res.json();
-
-  // 🔑 backend ALWAYS returns { output: string }
   return data.output;
 }
