@@ -16,7 +16,7 @@ export const callHuggingFace = async (model, payload) => {
           Authorization: `Bearer ${HF_API_KEY}`,
           "Content-Type": "application/json",
         },
-        timeout: 30000,
+        timeout: 120000,
       }
     );
 
