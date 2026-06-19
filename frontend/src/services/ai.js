@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/ai/process";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/ai/process`;
 
 export async function callAI({ mode, notes, question }) {
   const res = await fetch(API_URL, {
