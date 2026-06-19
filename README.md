@@ -1,9 +1,15 @@
 # 📘 Study Buddy - AI Study Assistant
 
-An AI-powered study assistant that helps students summarize study notes and ask context-aware questions using modern NLP models.
+An LLM-powered study assistant that helps students summarize study notes and ask context-aware questions using Hugging Face-hosted language models.
 Built with a clean React frontend and a Node.js + Express backend, powered by Hugging Face Inference APIs.
 
 This project focuses on real AI integration (not mock data) and clean frontend–backend separation.
+
+---
+
+## 🌐 Live Demo
+
+🔗 https://study-buddy-ai-study-assistant.vercel.app/
 
 ---
 
@@ -51,6 +57,14 @@ This project focuses on real AI integration (not mock data) and clean frontend�
 
 ---
 
+## 🚀 Deployment
+
+- Frontend: Vercel
+- Backend: Render
+- AI Inference: Hugging Face Inference API
+
+---
+
 ## 📂 Project Structure
 
 ```text
@@ -73,7 +87,7 @@ AI-study-assistant/
 
 ### Clone the repository
 ```text
-git clone https://github.com/<your-username>/ai-study-assistant.git
+git clone https://github.com/nandinisaxena2809/ai-study-assistant.git
 cd ai-study-assistant
 ```
 
@@ -108,6 +122,8 @@ Frontend runs on:
 ```text
 http://localhost:8080
 ```
+
+Note: The frontend automatically uses the local backend when running on localhost and the deployed backend in production.
 
 ---
 
@@ -197,12 +213,13 @@ POST http://localhost:5000/api/ai/process
 ---
 
 ## 🧠 How It Works
-- User enters study notes in the frontend
-- Frontend sends a POST request to the backend
-- Backend calls Hugging Face Inference API with task-specific prompts
-- AI-generated output is returned and displayed in the UI
+- User enters study notes and selects a task (Summarization or Q&A)
+- Frontend sends a POST request to the Express backend
+- Backend constructs task-specific prompts and sends them to Hugging Face Inference APIs
+- Hugging Face-hosted LLMs generate responses based on the provided notes
+- Generated output is returned to the frontend and displayed to the user
 
-All AI responses are real and generated live.
+All responses are generated in real time using live LLM inference.
 
 ---
 
