@@ -7,8 +7,12 @@ export function Header() {
       <div className="container max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-11 w-11 rounded-2xl gradient-primary flex items-center justify-center shadow-md">
-              <GraduationCap className="h-6 w-6 text-primary-foreground" />
+            <div className="h-11 w-11 rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="/favicon.png"
+                alt="Study Buddy"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground flex items-center gap-2">
