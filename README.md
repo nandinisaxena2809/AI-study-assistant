@@ -22,22 +22,6 @@ This project focuses on real AI integration (not mock data) and clean frontend�
 
 ---
 
-## 📸 Screenshots
-
-### Light Mode
-![Light Mode](./ss/light.png)
-
-### Dark Mode
-![Dark Mode](./ss/dark.png)
-
-### Study Notes Summarization
-![Summary](./ss/summary.png)
-
-### Contextual Question Answering
-![QA](./ss/qa.png)
-
----
-
 ## 🛠 Tech Stack
 
 ### Frontend
