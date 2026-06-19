@@ -19,16 +19,16 @@ This project focuses on real AI integration (not mock data) and clean frontendâ€
 ## ðŸ“¸ Screenshots
 
 ### Light Mode
-![Light Mode](./ss/light mode.png)
+![Light Mode](./ss/light.png)
 
 ### Dark Mode
-![Dark Mode](./ss/dark mode.png)
+![Dark Mode](./ss/dark.png)
 
 ### Study Notes Summarization
 ![Summary](./ss/summary.png)
 
 ### Contextual Question Answering
-![QA](./ss/ques ans.png)
+![QA](./ss/qa.png)
 
 ---
 
